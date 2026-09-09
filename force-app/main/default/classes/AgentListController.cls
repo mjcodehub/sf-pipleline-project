@@ -26,7 +26,7 @@ public class AgentListController {
         fullConversationList = new List<AI_Agent_Conversation__c>();
 		countOfConversations = 0;
         currentAgent = 'All';
-        currentSortOrder = 'Flag';
+        currentSortOrder = 'Flag' ;
         order = AIAgentConversationComparator.SortOrder.DEFAULT_ORDER;
         listOfAgents = [SELECT Id, Name, Num_Conversations__c FROM AI_Agent__c where Display_Agent__c = true Order by Num_Conversations__c  desc];
         // Find the total number of conversations across all of the agents
